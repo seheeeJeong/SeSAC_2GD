@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습2 사진과 똑같이 form 만들기</title>
+  </head>
+  <body>
+    <form>
+      <h4>설문조사</h4>
+      <label for="text">이름 <input type="text" id="text" /></label>
+      <br />
+      <label for="email"
+        >이메일 <input type="text" id="email" placeholder="love@example.com"
+      /></label>
+      <!-- input의 속성인 name은 그룹이기 때문에 통일 -->
+      <h4>나이</h4>
+      <label for="ten"><input type="radio" name="age" id="ten" /> 10대</label>
+      <label for="tenty"
+        ><input type="radio" name="age" id="twenty" /> 20대</label
+      >
+      <label for="thirty"
+        ><input type="radio" name="age" id="thirty" /> 30대</label
+      >
+      <label for="fourty"
+        ><input type="radio" name="age" id="fourty" /> 40대</label
+      >
+      <label for="fifty"
+        ><input type="radio" name="age" id="fifty" /> 50대</label
+      >
+      <label for="sixty"
+        ><input type="radio" name="age" id="sixty" /> 60대 이상</label
+      >
+
+      <h4>원하는 강의 (복수 가능)</h4>
+      <label for="html"
+        ><input type="checkbox" name="lecture" id="html" />html</label
+      >
+      <label for="javascript"
+        ><input
+          type="checkbox"
+          name="lecture"
+          id="javascript"
+        />javascript</label
+      >
+      <label for="css"
+        ><input type="checkbox" name="lecture" id="css" />css</label
+      >
+      <br />
+      <br />
+      <textarea
+        cols="100"
+        rows="10"
+        placeholder="하고 싶은 말을 써주세요 :&#41;"
+      ></textarea>
+      <br />
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>

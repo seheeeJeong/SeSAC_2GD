@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>tag 사용해보기</title>
   </head>
   <body>
     <h1>제목</h1>
@@ -68,6 +68,7 @@
             초밥
             <ul>
               <li>연어초밥</li>
+              <li>새우초밥</li>
             </ul>
           </li>
           <li>텐동</li>
@@ -88,5 +89,43 @@
         eum ab culpa cum, molestiae nostrum ea illo error eveniet dolor omnis.
       </div>
     </details>
+    <h3>img & a 태그</h3>
+    <!-- img 속성
+      - src: 이미지 경로
+      - alt: 이미지 설명  -->
+
+    <!-- a 태그 속성
+      - href: 이동 경로
+      - target: 웹페이지가 열릴 위치
+      - title: a 태그에 대한 설명 -->
+
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXGC8uSMBF7wbpiRQlQqZVYnRLdxllrVdSMA&usqp=CAU"
+      alt="강아지 사진"
+      width="500"
+    />
+    <!-- 상대경로와 절대경로
+      - 상대경로: 현재 위치로부터 경로를 찾는 것
+      - 절대경로: 상단의 폴더부터 차례대로 경로를 찾는 것 -->
+    <img src="./img/강아지1.jpeg" alt="강아지 사진" width="300" />
+    <img src="/html/img/강아지1.jpeg" alt="강아지 사진" width="400" />
+    <br />
+    <a
+      href="http://www.naver.com"
+      target="_blank"
+      title="mouse 커서를 올리면 나타나는 문장입니다."
+      >네이버 새창으로 이동</a
+    >
+    <br />
+    <br />
+    <a href="./test/01_practice1_T.html">실습1: 카페 메뉴(상대경로)</a>
+    <a href="/html/test/01_practice1.html">실습1: 카페 메뉴(절대경로)</a>
+    <br />
+    <br />
+
+    <!-- 새로운 사진을 저장한 후 사진을 클릭했을 때 구글로 이동하도록 만들기! -->
+    <a href="http://www.google.com" title="사진 클릭시 구글로 이동"
+      ><img src="./img/강아지1.jpeg" alt="google"
+    /></a>
   </body>
 </html>

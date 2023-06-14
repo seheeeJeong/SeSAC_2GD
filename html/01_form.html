@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form tag</title>
+  </head>
+  <body>
+    <form>
+      text <input type="text" /> <br />
+      <!-- 라벨은 웹접근성을 위해 써주면 좋음 -->
+      <label for="email">email</label>
+      <input type="email" id="email" placeholder="e-mail" value="안녕" /><br />
+      <label>pw<input type="password" placeholder="password" /></label><br />
+      age <input type="number" /><br />
+      color <input type="color" /> <br />범위 <input type="range" />
+      <br />업로드 <input type="file" /> <br />날짜 <input type="date" /><br />
+      <input type="button" value="버튼" /><br />
+      <input type="submit" value="버튼" /><br />
+      <button>버튼</button><br />
+
+      <!-- radio 와 checkbox -->
+      <h5>다음 중 img 태그의 속성인 것은? (하나만 고르시오)</h5>
+      <input type="radio" name="radio" /> title
+      <input type="radio" name="radio" /> value
+      <input type="radio" name="radio" /> alt
+      <input type="radio" name="radio" /> mouse
+
+      <!-- input과 label을 같게 해주면 글씨를 클릭해도 체크가 됨 -->
+      <h5>다음 중 input의 타입 속성이 아닌 것은? (모두 고르시오)</h5>
+      <input type="checkbox" name="checkbox" id="text" />
+      <label for="text">text</label>
+      <input type="checkbox" name="checkbox" id="img" />
+      <label for="img">img</label>
+      <input type="checkbox" name="checkbox" id="click" />
+      <label for="click">click</label>
+      <input type="checkbox" name="checkbox" id="date" />
+      <label for="date">date</label>
+      <br />
+      <br />
+      <br />
+      <!-- select -->
+      <select>
+        <optgroup label="라지">
+          <option>XXL</option>
+          <option>XL</option>
+          <option>L</option>
+        </optgroup>
+        <optgroup label="스몰">
+          <option>S</option>
+          <option>XS</option>
+          <option>XXS</option>
+        </optgroup>
+      </select>
+      <textarea cols="30" rows="10" placeholder="하고 싶은 말"></textarea>
+    </form>
+  </body>
+</html>
