@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 적용 방법</title>
+    <style>
+      p {
+        background-color: #c358ab;
+        color: aliceblue;
+      }
+      /* 
+      색깔 지정방법 3가지
+      1. 색깔 이름: ex) red, pink, aliceblue, ...
+      2. rgb(숫자1,숫자2,숫자3): 0~256, 0이 가장 어두운 색 => black ex) rgb(0,100,256)
+      3. #------: 여섯자리 숫자를 쓰면 된다. 
+        단, 16진수로 이루어진 숫자. 16진수 0~9, a,b,c,d,e,f
+        ex) #023efd
+      */
+      div {
+        background-color: red;
+      }
+
+      h2 {
+        background-color: violet;
+        color: white;
+      }
+    </style>
+    <link rel="stylesheet" href="./sytle01.css" />
+  </head>
+  <body>
+    <h1>CSS style 적용 방법 3가지</h1>
+    <div style="background-color: aqua">인라인 방식(우선순위 제일 높음)</div>
+
+    <p>내장 스타일 태그 방식</p>
+    <ul>
+      <li>외부 스타일 시트</li>
+      <li>방식</li>
+    </ul>
+    <h2>내장 스타일 vs. link 방식 h2 => 늦게 읽히는 것에 적용</h2>
+  </body>
+</html>
