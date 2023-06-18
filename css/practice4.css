@@ -1,0 +1,37 @@
+h2:hover {
+  background-color: black;
+  color: white;
+}
+
+textarea:focus {
+  background-color: rgb(255, 234, 238);
+}
+
+#red:checked + label {
+  background-color: red;
+  color: white;
+}
+
+#blue:checked + label {
+  background-color: blue;
+  color: white;
+}
+
+#yellow:checked + label {
+  background-color: yellow;
+}
+
+button {
+  background-color: coral;
+  color: white;
+  border-radius: 20%;
+  border: none;
+  padding: 10px;
+  margin-left: 330px;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: grey;
+  color: coral;
+}
