@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Moirai+One&display=swap");
+@font-face {
+  font-family: "LOTTERIACHAB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+span {
+  font-size: 70px;
+}
+
+.font-link {
+  font-family: "Grandiflora One", serif;
+}
+
+.font-import {
+  font-family: "Moirai One", cursive;
+}
+
+.noonnu_font {
+  font-family: "LOTTERIACHAB";
+}
+
+.container {
+  width: 500px;
+  background-color: aliceblue;
+}
+
+.sentences {
+  font-weight: 700;
+  font-size: 1em;
+  /* 16px = 1rem */
+  text-align: center;
+  text-decoration: line-through;
+  text-decoration: underline;
+  text-decoration: overline;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

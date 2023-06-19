@@ -1,0 +1,96 @@
+/* width, height 둘 다 적용 */
+.d-block {
+  background-color: aquamarine;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  padding: 30px;
+}
+
+/* width, height 둘 다 적용 안됨 */
+.d-inline {
+  display: inline;
+  background-color: pink;
+  border: 1px solid blue;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  padding: 30px;
+}
+
+/* width만 적용 */
+.d-inline-block {
+  display: inline-block;
+  background-color: yellowgreen;
+  border: 1px solid gray;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  padding: 30px;
+}
+
+/* --------------max-width & min-width--------------- */
+
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: orange;
+}
+
+.parent .min {
+  /* 최소 넓이
+    부모가 아무리 줄어도 무조건 400px 유지
+    늘어나는 건 자유 */
+  min-width: 400px;
+  height: 100px;
+  background-color: red;
+}
+
+.parent .max {
+  /* 최대 넓이 
+    부모가 아무리 늘려도 무조건 400px 유지
+    줄어드는 건 자유*/
+  max-width: 400px;
+  height: 100px;
+  background-color: green;
+}
+
+/* ----------단위---------- */
+
+.box {
+  background-color: aqua;
+  border: 1px solid black;
+}
+
+.box-px {
+  width: 50px;
+  height: 50px;
+}
+
+.box-view {
+  /* 화면 크기에 비례한 크기 */
+  width: 50vw;
+  height: 50vh;
+}
+
+.box-per {
+  /* 부모 크기에 비례한  크기
+    여기서 부모는 body
+    (참고로 body는 자동으로 8px margin을 가지고 있음 */
+  width: 50%;
+  height: 50%;
+}
+
+.rem {
+  font-size: 2rem;
+  /* 2rem = 32px */
+}
+
+.em {
+  /* em 단위는 부모의 폰트 크기를 받아옴
+    첫번째 자식 1em
+    두번째 자식 2em
+    세번째 자식 3em */
+  font-size: 2em;
+}

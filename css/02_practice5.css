@@ -1,0 +1,32 @@
+.stripes > * {
+  background-color: navy;
+  color: yellow;
+}
+
+/* .stripes > div:nth-child(2) {
+  background-color: yellow;
+  color: navy;
+}
+
+.stripes > div:nth-of-type(6) {
+  background-color: yellow;
+  color: navy;
+}
+
+.stripes > div:nth-child(10) {
+  background-color: yellow;
+  color: navy;
+} */
+
+.stripes > div:nth-child(4n + 2) {
+  background-color: yellow;
+  color: navy;
+}
+
+.box::before {
+  content: "택시 ";
+}
+
+.box::after {
+  content: " 빨리";
+}
