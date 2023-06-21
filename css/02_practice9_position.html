@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 position: relative & absolute & fixed</title>
+    <style>
+      /* body {
+        background: linear-gradient(white, tomato);
+      } */
+      .container {
+        background-color: black;
+        width: 500px;
+        height: 500px;
+        position: relative;
+      }
+      .container div {
+        width: 100px;
+        height: 100px;
+      }
+      .item1 {
+        background-color: red;
+        position: relative;
+        left: 50px;
+        top: 30px;
+      }
+      .item2 {
+        background-color: orange;
+        position: absolute;
+        /* container(부모)에 static이 아닌 position을 줘야지 적용이 됨 
+        보통은 relative를 줌 */
+        right: 30px;
+        bottom: 100px;
+      }
+      .item3 {
+        background-color: yellow;
+        position: fixed;
+        right: 100px;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item1">item1</div>
+      <div class="item2">item2</div>
+      <div class="item3">item3</div>
+    </div>
+  </body>
+</html>
