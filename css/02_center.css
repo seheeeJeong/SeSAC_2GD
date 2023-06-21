@@ -4,7 +4,7 @@
   background-color: hotpink;
   text-align: center;
   /* margin은 width가 명확하게 있어야 가능 */
-  margin: calc(50% - 50px) auto;
+  margin: calc(50vh - 50px) auto;
 }
 .border-w {
   background-color: red;
