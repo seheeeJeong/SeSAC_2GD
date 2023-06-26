@@ -1,0 +1,90 @@
+/* transition vs. animation
+    - transition
+        - hover, onClick, active 등의 이벤트에 의해 발생됨
+    - animation 
+        - '중간 스텝(%)'을 지정해 보다 세밀한 스타일 전환 가능 
+        - keyframes를 사용 */
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  /* relative는 자기 자신을 기준으로 움직임 */
+  position: relative;
+
+  /* 미리 keyframes를 작성 후 */
+  animation-name: box;
+
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  /* 시간함수 (transition-timing-function이랑 똑같음) */
+  animation-timing-function: linear;
+
+  animation-delay: 3s;
+}
+
+@keyframes box {
+  /* 0~100% 까지 단위를 쪼개서 */
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: 100px;
+  }
+  50% {
+    left: 200px;
+  }
+  75% {
+    left: 100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  background-color: mediumseagreen;
+  border-radius: 50%;
+  position: relative;
+
+  /* 단축 속성 */
+  animation: bounce1 1s ease-out infinite alternate;
+}
+
+@keyframes bounce1 {
+  /* to = 0%, from = 100% */
+  to {
+    top: 0px;
+  }
+  from {
+    top: 300px;
+  }
+}
+
+.ball2 {
+  width: 50px;
+  height: 50px;
+  background-color: royalblue;
+  position: absolute;
+  left: 200px;
+  border-radius: 50%;
+  animation: bounce2 2s infinite;
+}
+
+@keyframes bounce2 {
+  /* 0%랑 100% 같을 때 */
+  to,
+  from {
+    bottom: 0px;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    bottom: 300px;
+    animation-timing-function: ease-in;
+    background-color: hotpink;
+  }
+}

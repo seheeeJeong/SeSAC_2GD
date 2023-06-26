@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 animation</title>
+    <style>
+      .sentence {
+        position: relative;
+        animation-name: sentence-leader;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes sentence-sehee {
+        0% {
+          left: 100vw;
+        }
+
+        50% {
+          margin-left: 50vw;
+        }
+
+        100% {
+          left: 0vw;
+        }
+      }
+
+      @keyframes sentence-leader {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+        to {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+
+      .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, yellow, orange, brown);
+        position: absolute;
+        animation: ball 5s ease-in-out infinite;
+      }
+
+      @keyframes ball {
+        0%,
+        100% {
+          top: 0;
+          left: 0;
+        }
+        25% {
+          top: 0;
+          left: calc(100vw - 100px);
+        }
+        50% {
+          top: calc(100vh - 100px);
+          left: calc(100vw - 100px);
+        }
+        75% {
+          top: calc(100vh - 100px);
+          left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>실습1 글자 움직이기</h2>
+    <div class="sentence">
+      "As I relax on the sofa and gaze around a room a thought hits me: this is
+      exactly the place I've been looking for all my life. A little hideaway in
+      some sinkhole somewhere. I'd always thought of it as a secret, imaginary
+      place, and can barely believe that it actually exists. I close my eyes and
+      take a breath, and wonder of it all settles over me like a gentle cloud."
+    </div>
+
+    <hr />
+
+    <!-- <h2>실습2 공 움직이기</h2>
+    <div class="ball"></div> -->
+  </body>
+</html>
