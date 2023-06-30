@@ -144,12 +144,12 @@ console.log(typeof parseInt(n4)); // number
 console.log(parseInt(n4)); // 3
 
 // 실습: 성적 구하는 프로그램 만들기
-// let mathScore = prompt("수학 점수");
-// let engScore = prompt("영어 점수");
-// mathScore = Number(mathScore);
-// engScore = Number(engScore);
-// let avgScore = (mathScore + engScore) / 2;
-// console.log(avgScore);
+let mathScore = prompt("수학 점수");
+let engScore = prompt("영어 점수");
+mathScore = Number(mathScore);
+engScore = Number(engScore);
+let avgScore = (mathScore + engScore) / 2;
+console.log(avgScore);
 
 // 실습: Typeof를 사용해서 아래의 문구 만들기
 
