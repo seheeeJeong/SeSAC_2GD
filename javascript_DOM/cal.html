@@ -18,7 +18,7 @@
       <button type="button" onclick="cal();">계산</button>
       <button type="button" onclick="reset();">초기화</button><br /><br />
       <label for="result">결과: </label>
-      <input type="text" id="result" disabled="true" />
+      <input type="text" id="result" disabled="true" value="value 속성" />
       <!-- 
         disabled 속성은 해당 input을 비활성화 하여, 사용자가 클릭할 수 없게 하는 속성입니다.
         계산의 결과 값이 사용자에 의해 변경되는 것을 막기 위해 "disabled" 속성을 추가했습니다.
@@ -26,27 +26,27 @@
     </form>
 
     <script>
+      //   console.log(document.querySelector("[disabled]").value);
       // TODO: practice13_설명.png 이미지의 조건을 만족하는 js 코드 작성
       // cal(), reset() 함수를 미리 정의해두었습니다.
 
-      const operator = document.querySelector("#operator").value;
-      // const result = document.querySelector("#result");
-      const value1 = Number(document.getElementById("value1").value);
-      const value2 = Number(document.getElementById("value2").value);
-      let result;
-
       // [계산] 버튼 클릭시 cal() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
       function cal() {
-        if (operator === "+") {
-          result = value1 + value2;
-        } else if (operator === "-") {
-          result = value1 - value2;
-        } else if (operator === "*") {
-          result = value1 * value2;
-        } else if (operator === "/") {
-          result = value1 / value2;
+        let v1 = Number(document.getElementById("value1").value);
+        let v2 = Number(document.getElementById("value2").value);
+        let op = document.querySelector("#operator").value;
+
+        let result;
+        if (op === "+") {
+          result = v1 + v2;
+        } else if (op === "-") {
+          result = v1 - v2;
+        } else if (op === "*") {
+          result = v1 * v2;
+        } else if (op === "/") {
+          result = v1 / v2;
         } else {
-          result = "연산자가 아니예요.";
+          result = "연산자가 아니에요";
         }
 
         document.getElementById("result").value = result;
@@ -54,10 +54,10 @@
 
       // [초기화] 버튼 클릭시 reset() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
       function reset() {
-        value1.value = "";
-        value2.value = "";
-        operator.value = "";
-        result.value = "";
+        document.getElementById("value1").value = "";
+        document.getElementById("value2").value = "";
+        document.getElementById("operator").value = "";
+        document.getElementById("result").value = "";
       }
     </script>
   </body>
