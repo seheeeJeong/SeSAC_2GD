@@ -92,3 +92,28 @@ chgInput.addEventListener("change", () => {
   // "change": input에 변경이 일어나고 다른 요소를 클릭해서 focus out 시키면 이벤트 발생됨
   console.log("변경되었어요!");
 });
+
+// Todo list (폼이 제출되는 이벤트)
+// 'submit' form에 적용하는 이벤트
+console.log("------------------Todo list----------------");
+
+const todoForm = document.querySelector("#todo-form");
+const todos = document.querySelector(".todos");
+todoForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  // 폼이 실제로 제출되지 않도록 이벤트를 막는 것
+  // 새로고침 방지
+  const todoInput = document.querySelector('[name="todo"]');
+  console.log(todoInput.value);
+  const todos = todoInput.value;
+
+  // 입력창 초기화
+  todoInput.value = "";
+
+  // 만약에 제출할 때 공백이 들어왔을 때는 추가하고 싶지 않다면?
+  if (todoInput.value.trim !== "") {
+    const li = document.createElement("li");
+    li.append(todoInput.value);
+    todos.append(li);
+  }
+});
